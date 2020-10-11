@@ -10,7 +10,7 @@ Django rest framework test application.
 <p>3. Update and delete quiz (token required): /api/v1/quiz/{int:id}/, int:id - quiz pk.</p>
 <p>4. Quiz list: /api/v1/quiz/all/. </p>
 <p>5. Question list (token required): /api/v1/question/all/. </p>
-<p>6. Create new question (token required): /api/v1/question/new/, available data 'text'(required), 'qtype'(required), there are 3 types: text(1), choose one(2), choosemany(3), 'choices'(required if qtype 2 or 3) </p> .
+<p>6. Create new question (token required): /api/v1/question/new/, available data 'text'(required), 'qtype'(required), there are 3 types: text(1), choose one(2), choosemany(3), 'choices'(required if qtype 2 or 3). </p>
 <p>7. Update and delete question (token required): /api/v1/question/{int:id}/, int:id - question pk.</p>
 <p>There are no functions for choices(no needed). It can be created similarly as quiz and question. </p>
 <p>There is no functions for all passed quizzes(no neede). It can be created similarly as point 11. </p>
