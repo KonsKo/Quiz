@@ -1,4 +1,4 @@
-# Django rest framework test application.
+Django rest framework test application.
 
-$docker build -t quiz-docker -f Dockerfile .
-$docker run -it -p 80:8888 quiz-docker
+<p>$docker build -t quiz-docker -f Dockerfile .</p>
+<p>$docker run -it -p 80:8888 quiz-docker </p>
