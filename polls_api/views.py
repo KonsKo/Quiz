@@ -5,6 +5,7 @@ from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status, viewsets
+from polls_api.filters import QuizFilter
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 
@@ -16,10 +17,12 @@ class QuizCreateView(generics.CreateAPIView):
 class QuizListView(generics.ListAPIView):
     queryset = Quiz.objects.all()
     serializer_class = QuizDetailSerializer
+    filter_backends = (DjangoFilterBackend,)
     #filter_backends = [filters.SearchFilter]
-    search_fields = ('description', 'title',)
+    #search_fields = ('description', 'title',)
     #filter_fields = ('title',)
-    filterset_fields = ['title', 'description',]
+    #filterset_fields = ['title', 'description',]
+    filterset_class = QuizFilter
 
 @permission_classes([IsAdminUser])
 class QuizDetailView(generics.RetrieveUpdateDestroyAPIView):
