@@ -1,6 +1,6 @@
 Django rest framework test application.
 
-<p>$docker build -t quiz-docker -f Dockerfile .</p>
+<p>$docker build -t quiz-docker -f Dockerfile . / docker-compose build </p>
 <p>$docker-compose up -d</p>
 
 <h5>Instruction</h5>
